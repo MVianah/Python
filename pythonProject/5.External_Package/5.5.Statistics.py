@@ -1,21 +1,23 @@
 import random
 import statistics
 
-vListMedia = []
+vList = []
 
-for valor in range(0,10,1):
-    vListMedia.append(random.randint(0,100))
+for valor in range(0,11,1):
+    vList.append(random.randint(0,10))
 
-print(f'{vListMedia}')
+print(f'{vList}')
 
 # Retirando a Media
-vMedia = statistics.mean(vListMedia)
-print(f'{vMedia}')
+vMedia = statistics.mean(vList)
+print(f' Media -> {round(vMedia,2)}')
 
 # Retirando a Mediana
-vMediana = statistics.median(vListMedia)
-print(f'{vMediana}')
+vMediana = statistics.median(vList)
+vList.sort()
+print(f'{vList}')
+print(f' Mediana ->  {vMediana}')
 
 # Retirando a Moda
-vModa = statistics.mode(vListMedia)
-print(f'{vModa}')
+vModa = statistics.mode(vList)
+print(f' Moda -> {vModa}')
